@@ -1,0 +1,447 @@
+.about-page {
+    --about-navy: var(--primary);
+    --about-blue: var(--primary-dark);
+    --about-ink: var(--ink);
+    --about-muted: var(--muted);
+    --about-paper: var(--paper);
+    --about-card: var(--card);
+    background: radial-gradient(circle at 15% -10%, var(--sky) 0%, var(--paper) 42%, var(--surface) 100%);
+    color: var(--about-ink);
+}
+
+.about-hero {
+    padding: 120px 0 0;
+    background:
+        linear-gradient(rgba(68, 100, 132, 0.8), rgba(15, 29, 48, 0.8)),
+        url('/public/images/petronas.jpg') center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before,
+.about-hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.about-hero::before {
+    width: 340px;
+    height: 340px;
+    right: -110px;
+    top: -140px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.about-hero::after {
+    width: 260px;
+    height: 260px;
+    left: -120px;
+    bottom: -130px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.about-hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.25fr 0.85fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.about-hero-copy {
+    color: #fff;
+    padding: 8px 0;
+}
+
+.hero-kicker {
+    margin: 0 0 8px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: var(--sky);
+}
+
+.about-hero-copy h1 {
+    margin: 0;
+    font-size: clamp(2.4rem, 5vw, 4.1rem);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #fff;
+}
+
+.hero-lead {
+    margin: 16px 0 22px;
+    max-width: 640px;
+    color: rgba(248, 250, 255, 0.92);
+    font-size: 1rem;
+    line-height: 1.62;
+}
+
+.hero-cta {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.hero-cta:hover {
+    color: var(--ink);
+    background: var(--gold);
+}
+
+.about-hero-panel {
+    align-self: stretch;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 20px;
+    padding: 20px;
+    color: #fff;
+    backdrop-filter: blur(7px);
+}
+
+.about-hero-panel h2 {
+    margin: 0 0 12px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.glance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.glance-grid article {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+    padding: 10px 8px;
+    text-align: center;
+}
+
+.glance-grid strong {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.glance-grid span {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.about-hero-panel p {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-story {
+    padding: 34px 0 14px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 16px;
+}
+
+.story-card {
+    background: var(--about-card);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 20px 16px;
+    box-shadow: 0 12px 26px rgba(14, 28, 48, 0.08);
+}
+
+.story-card h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.35rem, 2.2vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.story-card p,
+.story-card li {
+    margin: 0 0 5px;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--about-muted);
+}
+
+.story-card ul,
+.story-card ol {
+    margin: 8px 0 0;
+    padding-left: 1.05rem;
+}
+
+.story-card li::marker {
+    color: var(--accent);
+}
+
+.story-card-side {
+    background: linear-gradient(145deg, var(--card), var(--paper));
+}
+
+.about-values {
+    padding: 8px 0 20px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.value-card {
+    border-radius: 14px;
+    padding: 16px 16px 14px;
+    border: 2px solid var(--border);
+    background: var(--card);
+    box-shadow: 0 6px 14px rgba(16, 29, 50, 0.07);
+    position: relative;
+}
+
+.value-card::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 0;
+    width: 60px;
+    height: 4px;
+    border-radius: 0 0 6px 6px;
+    background: var(--primary);
+}
+
+.value-card h3 {
+    margin: 8px 0 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.value-card p {
+    margin: 0;
+    color: var(--about-muted);
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+.about-team {
+    padding: 18px 0 34px;
+}
+
+.team-head {
+    margin-bottom: 14px;
+}
+
+.team-kicker {
+    margin: 0;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.team-head h2 {
+    margin: 2px 0 0;
+    font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.dept-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0 14px;
+}
+
+.dept-tab {
+    border: 1px solid var(--border);
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 100px;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+
+.dept-tab:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-1px);
+}
+
+.dept-tab.is-active {
+    background: linear-gradient(120deg, var(--primary), var(--accent));
+    color: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 8px 18px rgba(15, 33, 58, 0.16);
+}
+
+.team-section {
+    display: none;
+    margin-bottom: 18px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px 14px 16px;
+    box-shadow: 0 10px 24px rgba(15, 31, 56, 0.08);
+}
+
+.team-section.is-active {
+    display: block;
+}
+
+.team-section:last-child {
+    margin-bottom: 0;
+}
+
+.team-section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.team-section-head h3 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.team-section-head p {
+    margin: 1px 0 0;
+    color: var(--about-muted);
+    font-size: 0.8rem;
+}
+
+.team-section-head span {
+    border-radius: 999px;
+    background: var(--sky);
+    color: var(--primary);
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.team-card {
+    border: 1.4px solid var(--border);
+    border-radius: 10px;
+    background: linear-gradient(170deg, var(--card) 0%, var(--paper) 100%);
+    padding: 12px 10px 30px;
+    text-align: center;
+}
+
+.team-card img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 14px rgba(15, 33, 58, 0.18);
+    background: var(--surface);
+}
+
+.team-card h4 {
+    margin: 10px 0 5px;
+    font-size: 0.88rem;
+    line-height: 1.24;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.team-card p {
+    margin: 0;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: var(--primary);
+    color: #fff;
+    font-size: 0.62rem;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    .team-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .about-hero-grid,
+    .story-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-hero {
+        padding-top: 36px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        margin-top: 74px;
+        padding-top: 30px;
+    }
+
+    .hero-lead {
+        font-size: 0.9rem;
+    }
+
+    .team-section-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 460px) {
+    .about-hero-panel,
+    .story-card,
+    .value-card,
+    .team-section {
+        border-radius: 12px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}

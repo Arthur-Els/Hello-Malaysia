@@ -1,0 +1,271 @@
+.tourism-hero {
+    min-height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('/public/images/gateaway.png') center/cover;
+}
+
+.hero-overlay {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tourism-hero h1 {
+    margin: 0;
+    font-size: clamp(2.4rem, 3.2vw, 3.8rem);
+    font-weight: 700;
+    color: #fff;
+}
+
+.tourism-hero .hero-subtitle {
+    margin: 14px 0 6px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.tourism-hero .hero-desc {
+    margin: 0 auto;
+    max-width: 640px;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.tourism-ui {
+    background: var(--card);
+    padding: 28px 0 16px;
+}
+
+.tourism-shell {
+    max-width: 1120px;
+}
+
+.calendar-slot {
+    display: grid;
+    place-items: center;
+    margin-bottom: 26px;
+}
+
+.calendar-slot img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 6px;
+}
+
+.tourism-heading {
+    margin: 20px 0 20px;
+    text-align: center;
+    color: var(--primary);
+    font-family: var(--font-sans);
+    font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+    font-weight: 700;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.destination-card {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--card);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-body {
+    padding: 20px 10px 20px;
+}
+
+.destination-body h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.price-row {
+    margin: 4px 0;
+    font-size: 1rem;
+}
+
+.price-row span {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.price-row .free {
+    color: var(--accent);
+}
+
+.destination-body p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.35;
+}
+
+.itinerary-title {
+    margin-top: 34px;
+}
+
+.itinerary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.itinerary-card {
+    border: 1px solid var(--border);
+    padding: 12px 12px 10px;
+    background: var(--card);
+}
+
+.itinerary-card .day-label {
+    margin: 0 0 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    position: relative;
+    padding-left: 24px;
+}
+
+.itinerary-card .day-label::before {
+    content: "\1F5D3";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.4rem;
+    color: var(--accent);
+}
+
+.itinerary-card ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.itinerary-card li {
+    margin-bottom: 4px;
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.include-exclude {
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--primary-dark);
+    color: #fff;
+    padding: 16px 20px;
+    gap: 22px;
+}
+
+.include-exclude h3 {
+    margin: 0 0 8px;
+    font-family: var(--font-sans);
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+}
+
+.include-exclude ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+.include-exclude li {
+    margin-bottom: 4px;
+    font-size: 0.87rem;
+}
+
+.breakdown-title {
+    margin: 26px 0 16px;
+}
+
+.price-table-wrap {
+    border: 1px solid var(--border-strong);
+    margin-bottom: 20px;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-table td {
+    border: 1px solid var(--border-strong);
+    padding: 12px;
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+.price-table .amount {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.price-table .free {
+    text-transform: capitalize;
+}
+
+.total-row {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    justify-content: flex-end;
+    padding: 14px 16px;
+    border-top: 1px solid var(--border-strong);
+}
+
+.total-row span {
+    font-size: 0.86rem;
+    font-weight: 600;
+}
+
+.total-row strong {
+    color: var(--accent);
+    font-size: 1.46rem;
+}
+
+.total-row small {
+    color: var(--muted);
+    font-size: 0.73rem;
+}
+
+@media (max-width: 992px) {
+    .destinations-grid,
+    .itinerary-grid,
+    .include-exclude {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .tourism-hero {
+        min-height: 310px;
+    }
+
+    .hero-overlay {
+        min-height: 310px;
+    }
+
+    .destination-body h3 {
+        font-size: 1.22rem;
+    }
+
+    .include-exclude h3 {
+        font-size: 1.7rem;
+    }
+
+    .total-row {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}

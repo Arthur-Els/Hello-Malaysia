@@ -1,0 +1,146 @@
+:root {
+    --tourism-navy: var(--primary);
+    --tourism-deep: var(--primary-dark);
+    --tourism-sky: var(--sky);
+    --tourism-accent: var(--gold);
+}
+
+.tourism-hero,
+.nature-hero,
+.culinary-hero,
+.inspiring-hero,
+.about-hero {
+    min-height: 78vh;
+    padding-top: 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+.tourism-section {
+    min-height: auto;
+}
+
+.tourism-soft {
+    background: linear-gradient(180deg, var(--sky) 0%, var(--tourism-sky) 100%);
+}
+
+.tourism-dark {
+    color: var(--sky);
+    background: radial-gradient(circle at top left, var(--primary) 0%, var(--tourism-navy) 45%, var(--tourism-deep) 100%);
+}
+
+.tourism-grid,
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.tourism-card,
+.package-card,
+.itinerary-card {
+    border-radius: 16px;
+    padding: 1.2rem;
+    background: var(--card);
+    border: 1px solid rgba(16, 33, 51, 0.12);
+    box-shadow: 0 10px 24px rgba(8, 26, 44, 0.08);
+}
+
+.highlight-card {
+    background: linear-gradient(150deg, var(--gold) 0%, var(--card) 68%);
+    border-color: rgba(246, 190, 66, 0.55);
+}
+
+.tourism-card h3,
+.package-card h3,
+.itinerary-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+}
+
+.tourism-card ul,
+.package-card ul {
+    margin-bottom: 0;
+    padding-left: 1.15rem;
+}
+
+.tourism-card li,
+.package-card li {
+    margin-bottom: 0.45rem;
+}
+
+.package-card {
+    background: rgba(255, 255, 255, 0.96);
+}
+
+.package-tag {
+    display: inline-block;
+    margin-bottom: 0.65rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(246, 190, 66, 0.22);
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 0.86rem;
+}
+
+.itinerary-list {
+    display: grid;
+    gap: 0.95rem;
+}
+
+.itinerary-card p {
+    margin-bottom: 0.6rem;
+}
+
+.itinerary-card p:last-child {
+    margin-bottom: 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+    .tourism-grid,
+    .package-grid,
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .tourism-hero,
+    .nature-hero,
+    .culinary-hero,
+    .inspiring-hero,
+    .about-hero {
+        min-height: 70vh;
+    }
+
+    .tourism-grid,
+    .package-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tourism-card,
+    .package-card,
+    .itinerary-card {
+        padding: 1rem;
+    }
+}

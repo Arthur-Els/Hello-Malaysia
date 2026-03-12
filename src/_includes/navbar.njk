@@ -1,0 +1,43 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark tourism-nav">
+        <div class="container">
+            <a href="/">
+                <img class="navbar-brand" src="/public/images/logo.png" alt="Hello Malaysia Logo" width="86" height="86">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tourismNav" aria-controls="tourismNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="tourismNav">
+                <ul class="navbar-nav ms-auto gap-lg-4">
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/tourism/' %}active{% endif %}" href="/tourism/">Tourism</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/nature/' %}active{% endif %}" href="/nature/">Nature</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/cuisine/' %}active{% endif %}" href="/cuisine/">Cuisine</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/culture/' %}active{% endif %}" href="/culture/">Culture</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/inspiring/' %}active{% endif %}" href="/inspiring/">Inspiring Figures</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="/about/">About Us</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

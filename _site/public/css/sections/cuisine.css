@@ -1,0 +1,487 @@
+.culinary-page {
+    background: var(--surface);
+}
+
+.culinary-main {
+    padding-top: 108px;
+    padding-bottom: 26px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 14px 0 10px;
+    color: var(--primary);
+    font-family: var(--font-sans);
+    font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+    font-weight: 700;
+}
+
+.culinary-hero-panel {
+    position: relative;
+    min-height: 430px;
+    margin-bottom: 100px;
+    border-radius: 0 0 22px 22px;
+    overflow: hidden;
+    background: url('/public/images/makanan.png') center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.44) 52%, rgba(0, 0, 0, 0.68) 100%);
+}
+
+.hero-content {
+    position: relative;
+    color: #fff;
+    padding: 140px 100px 0;
+}
+
+.hero-content h1 {
+    font-family: var(--font-sans);
+    margin: 0 0 20px;
+    font-size: clamp(2.3rem, 4.3vw, 3.6rem);
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.08;
+}
+
+.hero-lower {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    align-items: start;
+}
+
+.hero-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.9);
+    position: relative;
+    margin-bottom: 14px;
+}
+
+.hero-intro p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.96);
+    font-weight: 500;
+}
+
+.hero-gallery {
+    display: flex;
+    gap: 14px;
+}
+
+.hero-gallery img {
+    width: 132px;
+    height: 132px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+}
+
+.signature-card {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 0.92fr 1.4fr;
+    gap: 14px;
+    padding: 12px;
+    align-items: start;
+}
+
+.signature-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.signature-copy {
+    padding: 2px 4px;
+}
+
+.signature-copy h3,
+.beverage-copy h3 {
+    font-family: var(--font-sans);
+}
+
+.signature-copy h3 {
+    margin: 0 0 10px;
+    font-family: var(--font-sans);
+    font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+    line-height: 1.08;
+    color: var(--ink);
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.tag-row span {
+    border-radius: 999px;
+    padding: 6px 13px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: var(--sky);
+    color: var(--ink-soft);
+    border: 1px solid var(--border);
+}
+
+.signature-copy p,
+.beverage-copy p,
+.ingredient-grid li {
+    font-size: 0.82rem;
+    line-height: 1.4;
+    color: var(--ink);
+    margin-bottom: 6px;
+}
+
+.signature-copy p {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.signature-ingredients {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 8px;
+}
+
+.signature-ingredients h4 {
+    margin: 0 0 4px;
+    color: var(--accent);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+}
+
+.signature-ingredients ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.signature-ingredients li {
+    font-size: 0.8rem;
+    line-height: 1.36;
+    margin-bottom: 2px;
+    color: var(--ink);
+}
+
+.signature-ingredients li::marker {
+    color: var(--muted);
+}
+
+.nutrition-table-wrap {
+    margin-top: 10px;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+    border: 1px solid var(--border);
+    text-align: center;
+    padding: 8px 6px;
+}
+
+.nutrition-table th {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+}
+
+.nutrition-table td:first-child {
+    font-weight: 600;
+    color: var(--sky);
+    background: var(--primary-dark);
+}
+
+.nutrition-table tbody tr:nth-child(odd) td:not(:first-child) {
+    background: var(--sky);
+}
+
+.nutrition-table tbody tr:nth-child(even) td:not(:first-child) {
+    background: var(--card);
+}
+
+.ingredient-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 12px;
+}
+
+.ingredient-grid h4 {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin: 0 0 6px;
+}
+
+.ingredient-grid ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.ingredient-grid li::marker {
+    color: var(--accent);
+}
+
+.satay-block {
+    margin-top: 8px;
+}
+
+.satay-card .signature-copy h3 {
+    margin-top: 2px;
+}
+
+.satay-card > img {
+    height: 450px;
+    width: 450px;
+    align-self: start;
+    margin-left: 8rem;
+}
+
+.beverage-title {
+    color: var(--primary-dark);
+}
+
+.beverage-section {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 20px 18px 28px;
+    box-shadow: 0 14px 34px rgba(15, 29, 48, 0.08);
+}
+
+.beverage-card {
+    border-radius: 16px;
+    background: var(--primary-dark);
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 18px;
+    padding: 18px;
+    align-items: center;
+    border: 4px solid var(--primary-dark);
+    box-shadow: 0 18px 40px rgba(14, 46, 121, 0.28);
+}
+
+.beverage-image img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.24);
+}
+
+.beverage-copy {
+    color: #f5f6fa;
+    padding-right: 4px;
+}
+
+.beverage-copy h3 {
+    margin: 0 0 10px;
+    font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+    line-height: 1.08;
+    color: #fff;
+}
+
+.beverage-copy .tag-row {
+    margin: 6px 0 14px;
+}
+
+.beverage-copy .tag-row span {
+    background: rgba(255, 255, 255, 0.16);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.24);
+}
+
+.beverage-copy p {
+    color: rgba(241, 245, 255, 0.9);
+}
+
+.beverage-ingredients {
+    margin: 0;
+}
+
+.beverage-ingredients h4 {
+    margin: 0 0 8px;
+    color: #c43b27;
+    font-size: 1.15rem;
+}
+
+.beverage-ingredients ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--ink);
+}
+
+.beverage-ingredients li {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.beverage-nutrition {
+    max-width: 520px;
+    margin: 0;
+}
+
+.beverage-nutrition .nutrition-table {
+    border: 1px solid var(--border);
+}
+
+.beverage-nutrition .nutrition-table th {
+    background: var(--primary-dark);
+    color: #fff;
+}
+
+.beverage-nutrition .nutrition-table td:first-child {
+    background: rgba(14, 46, 121, 0.08);
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.beverage-nutrition .nutrition-table td {
+    text-align: left;
+    color: var(--ink);
+}
+
+.beverage-nutrition .nutrition-table td:last-child {
+    font-weight: 600;
+}
+
+.beverage-details {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 18px;
+    margin: 18px 10px 0;
+    align-items: start;
+}
+
+@media (max-width: 992px) {
+    .signature-card,
+    .beverage-card {
+        grid-template-columns: 1fr;
+    }
+
+    .signature-card img {
+        min-height: 240px;
+        height: 240px;
+    }
+
+    .signature-copy {
+        padding: 2px 2px 6px;
+    }
+
+    .hero-content {
+        padding: 52px 22px 20px;
+    }
+
+    .hero-lower {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .hero-intro {
+        margin-top: 0;
+    }
+
+    .hero-intro p {
+        max-width: 100%;
+    }
+
+    .hero-gallery {
+        margin: 0;
+    }
+
+    .hero-gallery img {
+        width: calc(33.333% - 9px);
+        max-width: 170px;
+        height: 145px;
+    }
+
+    .ingredient-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .beverage-section {
+        padding: 16px 14px 22px;
+    }
+
+    .beverage-image img {
+        height: 210px;
+    }
+
+    .beverage-details {
+        grid-template-columns: 1fr;
+        margin: 14px 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .culinary-main {
+        padding-top: 94px;
+    }
+
+    .culinary-hero-panel {
+        min-height: 0;
+        border-radius: 14px;
+    }
+
+    .hero-content {
+        padding: 24px 14px 10px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.6rem, 7vw, 2.2rem);
+    }
+
+    .hero-intro p {
+        font-size: 0.92rem;
+    }
+
+    .hero-gallery {
+        margin: 0;
+        gap: 8px;
+    }
+
+    .hero-gallery img {
+        width: calc(33.333% - 6px);
+        height: 120px;
+        border-width: 2px;
+    }
+
+    .signature-ingredients {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .beverage-card {
+        padding: 16px;
+    }
+
+    .beverage-image img {
+        height: 190px;
+    }
+}
